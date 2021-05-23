@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { View, StyleSheet, ViewStyle, StyleProp } from "react-native";
 
 import { SizesProps, useGrid } from "./Provider";
