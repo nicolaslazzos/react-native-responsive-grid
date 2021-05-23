@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { View, StyleSheet, useWindowDimensions } from "react-native";
 
 export type OrientationType = "portrait" | "landscape";
