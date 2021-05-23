@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import * as React from "react";
 import { View, StyleSheet, useWindowDimensions } from "react-native";
 
 export type OrientationType = "portrait" | "landscape";
@@ -39,7 +39,7 @@ export interface GridProviderProps {
 export const useWindowResize = (breakpoints: SizesProps) => {
 	const { width } = useWindowDimensions();
 
-	const [layout, setLayout] = useState<Partial<LayoutProps>>({ size: "xs" });
+	const [layout, setLayout] = React.useState<Partial<LayoutProps>>({ size: "xs" });
 
 	const getSize = () => {
 		if (width < breakpoints["xs"]) {
@@ -55,7 +55,7 @@ export const useWindowResize = (breakpoints: SizesProps) => {
 		}
 	};
 
-	useEffect(() => {
+	React.useEffect(() => {
 		const newLayout: Partial<LayoutProps> = {};
 
 		newLayout.size = getSize();
