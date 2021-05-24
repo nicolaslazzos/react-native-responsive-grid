@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, StyleSheet, useWindowDimensions } from "react-native";
+import { View, StyleSheet, Platform, useWindowDimensions } from "react-native";
 
 export type OrientationType = "portrait" | "landscape";
 
@@ -18,12 +18,12 @@ export interface LayoutProps {
 }
 
 export interface GridContextProps {
-	layout: LayoutProps;
+	size: SizeType;
 	sizes: SizesProps;
 	padding: number;
 }
 
-const GridContext = React.createContext<Partial<GridContextProps>>({});
+const GridContext = React.createContext<Partial<GridContextProps>>({ size: Platform.OS == "web" ? "lg" : "sm" });
 
 export const useGrid = () => React.useContext(GridContext);
 
@@ -39,8 +39,6 @@ export interface GridProviderProps {
 export const useWindowResize = (breakpoints: SizesProps) => {
 	const { width } = useWindowDimensions();
 
-	const [layout, setLayout] = React.useState<Partial<LayoutProps>>({ size: "xs" });
-
 	const getSize = () => {
 		if (width < breakpoints["xs"]) {
 			return "xs";
@@ -55,15 +53,9 @@ export const useWindowResize = (breakpoints: SizesProps) => {
 		}
 	};
 
-	React.useEffect(() => {
-		const newLayout: Partial<LayoutProps> = {};
+	const size: SizeType = getSize();
 
-		newLayout.size = getSize();
-
-		if (newLayout.size !== layout.size) setLayout(newLayout);
-	});
-
-	return layout as LayoutProps;
+	return size;
 };
 
 const defaultProps: GridProviderProps = {
@@ -88,7 +80,7 @@ const defaultProps: GridProviderProps = {
 export const GridProvider: React.FC<GridProviderProps> = (props) => {
 	let { children, breakpoints, sizes, padding, breakpointsColor, showBreakpoints } = props;
 
-	const layout = useWindowResize(breakpoints);
+	const size = useWindowResize(breakpoints);
 
 	const renderBreakpoints = () => {
 		if (!showBreakpoints) return null;
@@ -107,7 +99,7 @@ export const GridProvider: React.FC<GridProviderProps> = (props) => {
 	};
 
 	return (
-		<GridContext.Provider value={{ layout, padding, sizes }}>
+		<GridContext.Provider value={{ size, padding, sizes }}>
 			{children}
 			{renderBreakpoints()}
 		</GridContext.Provider>

@@ -13,11 +13,11 @@ const defaultProps: ColProps = {
 };
 
 export const Col: React.FC<ColProps> = ({ fluid, style, children, ...props }) => {
-	let { layout, sizes, padding } = useGrid();
+	let { size, sizes, padding } = useGrid();
 
 	sizes = { ...sizes, ...props };
 
-	const columns = sizes[layout.size];
+	const columns = sizes[size];
 
 	const colStyles = StyleSheet.create({
 		style: { width: colWidth * columns + "%", paddingRight: padding, paddingBottom: padding },
