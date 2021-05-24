@@ -1,10 +1,9 @@
 import * as React from "react";
-import { View, StyleSheet, ViewStyle, StyleProp } from "react-native";
+import { View, StyleSheet, ViewProps } from "react-native";
 
 import { SizesProps, useGrid } from "./Provider";
 
-export interface ColProps extends SizesProps {
-	style?: StyleProp<ViewStyle>;
+export interface ColProps extends SizesProps, ViewProps {
 	fluid?: boolean;
 }
 

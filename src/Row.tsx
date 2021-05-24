@@ -1,11 +1,9 @@
 import * as React from "react";
-import { View, StyleSheet, ViewStyle, StyleProp } from "react-native";
+import { View, StyleSheet, ViewProps } from "react-native";
 
 import { useGrid } from "./Provider";
 
-export interface RowProps {
-	style?: StyleProp<ViewStyle>;
-}
+export interface RowProps extends ViewProps {}
 
 export const Row: React.FC<RowProps> = ({ style, children, ...props }) => {
 	const { padding } = useGrid();

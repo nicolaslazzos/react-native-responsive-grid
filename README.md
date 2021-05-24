@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: "white",
     borderRadius: 8,
-		minHeight: 200,
+    minHeight: 200,
     overflow: "hidden",
     shadowColor: "#000",
     shadowOffset: {

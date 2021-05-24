@@ -1,13 +1,12 @@
 import * as React from "react";
-import { View, ViewStyle, StyleProp } from "react-native";
+import { View, ViewStyle, StyleProp, ViewProps } from "react-native";
 
 import { Col } from "./Col";
 import { Row } from "./Row";
 import { SizesProps } from "./Provider";
 
-export interface GridProps extends SizesProps {
+export interface GridProps extends SizesProps, ViewProps {
 	padding?: number;
-	style?: StyleProp<ViewStyle>;
 	rowStyle?: StyleProp<ViewStyle>;
 	colStyle?: StyleProp<ViewStyle>;
 }
