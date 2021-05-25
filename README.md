@@ -1,5 +1,11 @@
 ## React Native Responsive Grid
 
+[![version](https://img.shields.io/github/package-json/v/nicolaslazzos/react-native-responsive-grid/master?label=npm&style=flat-square)](https://www.npmjs.com/package/@nlazzos/react-native-responsive-grid) 
+[![npm](https://img.shields.io/npm/l/@nlazzos/react-native-responsive-grid?style=flat-square)](https://www.npmjs.com/package/@nlazzos/react-native-responsive-grid) 
+[![npm](https://img.shields.io/badge/types-included-blue?style=flat-square)](https://www.npmjs.com/package/@nlazzos/react-native-responsive-grid)
+[![npm](https://img.shields.io/npm/dm/@nlazzos/react-native-responsive-grid?style=flat-square&color=red)](https://www.npmjs.com/package/@nlazzos/react-native-responsive-grid) 
+[![npm](https://img.shields.io/github/stars/nicolaslazzos/react-native-responsive-grid?style=flat-square)](https://www.npmjs.com/package/@nlazzos/react-native-responsive-grid) 
+
 The best responsive grid component for react-native and react-native-web.
 
 ### Installation
