@@ -1,6 +1,6 @@
 {
-	"name": "@nlazzos/react-native-responsive-grid",
-	"version": "1.0.13",
+	"name": "react-native-responsive-grid-component",
+	"version": "1.0.0",
 	"description": "A responsive grid component for react-native and react-native-web.",
 	"main": "./lib/index.js",
 	"types": "./lib/index.d.ts",
@@ -32,6 +32,7 @@
 		"react-native",
 		"react-native-web",
 		"react-native-responsive-grid",
+		"react-native-responsive-grid-component",
 		"react-native-grid",
 		"grid"
 	]

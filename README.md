@@ -1,10 +1,10 @@
 ## React Native Responsive Grid
 
-[![version](https://img.shields.io/github/package-json/v/nicolaslazzos/react-native-responsive-grid/master?label=npm&style=flat-square)](https://www.npmjs.com/package/@nlazzos/react-native-responsive-grid) 
-[![npm](https://img.shields.io/npm/l/@nlazzos/react-native-responsive-grid?style=flat-square)](https://www.npmjs.com/package/@nlazzos/react-native-responsive-grid) 
-[![npm](https://img.shields.io/badge/types-included-blue?style=flat-square)](https://www.npmjs.com/package/@nlazzos/react-native-responsive-grid)
-[![npm](https://img.shields.io/npm/dm/@nlazzos/react-native-responsive-grid?style=flat-square&color=red)](https://www.npmjs.com/package/@nlazzos/react-native-responsive-grid) 
-[![npm](https://img.shields.io/github/stars/nicolaslazzos/react-native-responsive-grid?style=flat-square)](https://www.npmjs.com/package/@nlazzos/react-native-responsive-grid) 
+[![version](https://img.shields.io/github/package-json/v/nicolaslazzos/react-native-responsive-grid/master?label=npm&style=flat-square)](https://www.npmjs.com/package/react-native-responsive-grid-component) 
+[![npm](https://img.shields.io/npm/l/react-native-responsive-grid-component?style=flat-square)](https://www.npmjs.com/package/react-native-responsive-grid-component) 
+[![npm](https://img.shields.io/badge/types-included-blue?style=flat-square)](https://www.npmjs.com/package/react-native-responsive-grid-component)
+[![npm](https://img.shields.io/npm/dm/react-native-responsive-grid-component?style=flat-square&color=red)](https://www.npmjs.com/package/react-native-responsive-grid-component) 
+[![npm](https://img.shields.io/github/stars/nicolaslazzos/react-native-responsive-grid?style=flat-square)](https://www.npmjs.com/package/react-native-responsive-grid-component) 
 
 The best responsive grid component for react-native and react-native-web.
 
@@ -13,20 +13,20 @@ The best responsive grid component for react-native and react-native-web.
 Using yarn:
 
 ```bash
-yarn add @nlazzos/react-native-responsive-grid
+yarn add react-native-responsive-grid-component
 ```
 
 Using npm:
 
 ```bash
-npm install @nlazzos/react-native-responsive-grid --save
+npm install react-native-responsive-grid-component --save
 ```
 
 ### Example
 
 Check the following example to see it in action and try changing the default props to see how it works.
 
-[![npm](https://img.shields.io/static/v1?style=flat-square&label=Expo&message=Example&logo=expo)](https://snack.expo.io/@nicolaslazzos/react-native-responsive-grid-example)
+[![npm](https://img.shields.io/static/v1?style=flat-square&label=Expo&message=Example&logo=expo)](https://snack.expo.io/@nicolaslazzos/react-native-responsive-grid-component-example)
 
 ### Usage
 
@@ -34,7 +34,7 @@ First of all, you need to wrap your root component with the `GridProvider`.
 
 ```javascript
 import React from "react";
-import { GridProvider } from "@nlazzos/react-native-responsive-grid";
+import { GridProvider } from "react-native-responsive-grid-component";
 
 const App = () => {
   return (
@@ -56,7 +56,7 @@ You can use directly the `Grid` component as in the following example.
 ```javascript
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import { Grid } from "@nlazzos/react-native-responsive-grid";
+import { Grid } from "react-native-responsive-grid-component";
 
 const App = () => {
   return (
@@ -96,7 +96,7 @@ You can use directly the `Col` and `Row` components as in the following example.
 ```javascript
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import { Col, Row } from "@nlazzos/react-native-responsive-grid";
+import { Col, Row } from "react-native-responsive-grid-component";
 
 const App = () => {
   return (
